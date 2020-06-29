@@ -1,0 +1,91 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\dev\\Formation\\Micro-services\\Formation.Weathercast.Service\\Formation.Weathercast.Service.csproj": {}
+  },
+  "projects": {
+    "C:\\dev\\Formation\\Micro-services\\Formation.Weathercast.Service\\Formation.Weathercast.Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\dev\\Formation\\Micro-services\\Formation.Weathercast.Service\\Formation.Weathercast.Service.csproj",
+        "projectName": "Formation.Weathercast.Service",
+        "projectPath": "C:\\dev\\Formation\\Micro-services\\Formation.Weathercast.Service\\Formation.Weathercast.Service.csproj",
+        "packagesPath": "C:\\Users\\bruno.beraud\\.nuget\\packages\\",
+        "outputPath": "C:\\dev\\Formation\\Micro-services\\Formation.Weathercast.Service\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\bruno.beraud\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "\\\\prd-nas-01\\INFO-WEB-PROD\\Nuget\\Releases": {},
+          "\\\\prd-nas-01\\INFO-WEB-PROD\\Nuget\\Snapshots": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nexus.factory.groupephotoweb.fr/repository/nuget-group": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Steeltoe.Common.Hosting": {
+              "target": "Package",
+              "version": "[2.4.4, )"
+            },
+            "Steeltoe.Extensions.Configuration.CloudFoundryCore": {
+              "target": "Package",
+              "version": "[2.4.4, )"
+            },
+            "Steeltoe.Extensions.Logging.DynamicLogger": {
+              "target": "Package",
+              "version": "[2.4.4, )"
+            },
+            "Steeltoe.Management.CloudFoundryCore": {
+              "target": "Package",
+              "version": "[2.4.4, )"
+            },
+            "gitinfo": {
+              "target": "Package",
+              "version": "[*, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
