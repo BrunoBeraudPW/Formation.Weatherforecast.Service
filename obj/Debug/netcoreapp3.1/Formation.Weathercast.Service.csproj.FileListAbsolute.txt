@@ -36,3 +36,11 @@ C:\dev\Formation\Micro-services\Formation.Weathercast.Service\bin\Debug\netcorea
 C:\dev\Formation\Micro-services\Formation.Weathercast.Service\bin\Debug\netcoreapp3.1\Steeltoe.Management.OpenCensus.Abstractions.dll
 C:\dev\Formation\Micro-services\Formation.Weathercast.Service\bin\Debug\netcoreapp3.1\Steeltoe.Management.OpenCensusBase.dll
 C:\dev\Formation\Micro-services\Formation.Weathercast.Service\obj\Debug\netcoreapp3.1\Formation.Weathercast.Service.MvcApplicationPartsAssemblyInfo.cs
+C:\dev\Formation\Micro-services\Formation.Weathercast.Service\obj\Debug\netcoreapp3.1\GitInfo.cache
+C:\dev\Formation\Micro-services\Formation.Weathercast.Service\bin\Debug\netcoreapp3.1\git.properties
+C:\dev\Formation\Micro-services\Formation.Weathercast.Service\bin\Debug\netcoreapp3.1\Formation.Weathercast.Service.xml
+C:\dev\Formation\Micro-services\Formation.Weathercast.Service\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\dev\Formation\Micro-services\Formation.Weathercast.Service\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\dev\Formation\Micro-services\Formation.Weathercast.Service\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\dev\Formation\Micro-services\Formation.Weathercast.Service\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\dev\Formation\Micro-services\Formation.Weathercast.Service\obj\Debug\netcoreapp3.1\Formation.Weathercast.Service.xml
