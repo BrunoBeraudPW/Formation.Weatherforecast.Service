@@ -25,10 +25,13 @@
       "Formation.Weathercast.Service/1.0.0": {
         "dependencies": {
           "Steeltoe.Common.Hosting": "2.4.4",
+          "Steeltoe.Discovery.ClientCore": "2.4.4",
           "Steeltoe.Extensions.Configuration.CloudFoundryCore": "2.4.4",
+          "Steeltoe.Extensions.Configuration.ConfigServerCore": "2.4.4",
           "Steeltoe.Extensions.Logging.DynamicLogger": "2.4.4",
           "Steeltoe.Management.CloudFoundryCore": "2.4.4",
           "Swashbuckle.AspNetCore": "5.5.1",
+          "Swashbuckle.AspNetCore.ReDoc": "5.5.1",
           "GitInfo": "2.0.26",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
@@ -56,16 +59,16 @@
           "Microsoft.AspNetCore.Diagnostics.HealthChecks": "3.1.0.0",
           "Microsoft.AspNetCore": "3.1.0.0",
           "Microsoft.AspNetCore.HostFiltering": "3.1.0.0",
-          "Microsoft.AspNetCore.Hosting.Abstractions": "3.1.0.0",
+          "Microsoft.AspNetCore.Hosting.Abstractions.Reference": "3.1.0.0",
           "Microsoft.AspNetCore.Hosting": "3.1.0.0",
-          "Microsoft.AspNetCore.Hosting.Server.Abstractions": "3.1.0.0",
+          "Microsoft.AspNetCore.Hosting.Server.Abstractions.Reference": "3.1.0.0",
           "Microsoft.AspNetCore.Html.Abstractions": "3.1.0.0",
-          "Microsoft.AspNetCore.Http.Abstractions": "3.1.0.0",
+          "Microsoft.AspNetCore.Http.Abstractions.Reference": "3.1.0.0",
           "Microsoft.AspNetCore.Http.Connections.Common": "3.1.0.0",
           "Microsoft.AspNetCore.Http.Connections": "3.1.0.0",
           "Microsoft.AspNetCore.Http": "3.1.0.0",
           "Microsoft.AspNetCore.Http.Extensions": "3.1.0.0",
-          "Microsoft.AspNetCore.Http.Features": "3.1.0.0",
+          "Microsoft.AspNetCore.Http.Features.Reference": "3.1.0.0",
           "Microsoft.AspNetCore.HttpOverrides": "3.1.0.0",
           "Microsoft.AspNetCore.HttpsPolicy": "3.1.0.0",
           "Microsoft.AspNetCore.Identity": "3.1.0.0",
@@ -282,7 +285,7 @@
           "System.Text.Encoding.CodePages": "4.1.3.0",
           "System.Text.Encoding.Reference": "4.1.2.0",
           "System.Text.Encoding.Extensions.Reference": "4.1.2.0",
-          "System.Text.Encodings.Web": "4.0.5.0",
+          "System.Text.Encodings.Web.Reference": "4.0.5.0",
           "System.Text.Json.Reference": "4.0.1.0",
           "System.Text.RegularExpressions.Reference": "4.2.2.0",
           "System.Threading.Channels": "4.0.2.0",
@@ -292,7 +295,7 @@
           "System.Threading.Tasks.Reference": "4.1.2.0",
           "System.Threading.Tasks.Extensions.Reference": "4.3.1.0",
           "System.Threading.Tasks.Parallel": "4.0.4.0",
-          "System.Threading.Thread": "4.1.2.0",
+          "System.Threading.Thread.Reference": "4.1.2.0",
           "System.Threading.ThreadPool": "4.1.2.0",
           "System.Threading.Timer.Reference": "4.1.2.0",
           "System.Transactions": "4.0.0.0",
@@ -320,7 +323,55 @@
           "Formation.Weathercast.Service.dll": {}
         }
       },
+      "Consul/0.7.2.6": {
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "Newtonsoft.Json": "11.0.2",
+          "System.Collections": "4.3.0",
+          "System.Linq": "4.3.0",
+          "System.Net.Http": "4.3.3",
+          "System.Net.Http.WinHttpHandler": "4.0.0",
+          "System.Runtime": "4.3.0",
+          "System.Security.Cryptography.X509Certificates": "4.3.0",
+          "System.Text.RegularExpressions": "4.3.0",
+          "System.Threading": "4.3.0",
+          "System.Threading.Thread": "4.0.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Consul.dll": {
+            "assemblyVersion": "0.7.2.6",
+            "fileVersion": "0.7.2.6"
+          }
+        },
+        "compile": {
+          "lib/netstandard1.3/Consul.dll": {}
+        }
+      },
       "GitInfo/2.0.26": {},
+      "Microsoft.AspNetCore.Hosting.Abstractions/2.1.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Hosting.Server.Abstractions": "2.1.0",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.1.0",
+          "Microsoft.Extensions.Hosting.Abstractions": "3.0.0"
+        }
+      },
+      "Microsoft.AspNetCore.Hosting.Server.Abstractions/2.1.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "2.1.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "3.0.0"
+        }
+      },
+      "Microsoft.AspNetCore.Http.Abstractions/2.1.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "2.1.0",
+          "System.Text.Encodings.Web": "4.5.0"
+        }
+      },
+      "Microsoft.AspNetCore.Http.Features/2.1.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "3.0.0"
+        }
+      },
       "Microsoft.DiaSymReader/1.2.0": {
         "dependencies": {
           "Microsoft.Net.Compilers": "2.3.0",
@@ -656,6 +707,23 @@
       "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {},
       "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {},
       "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {},
+      "Steeltoe.CloudFoundry.ConnectorBase/2.4.4": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "3.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "3.0.0",
+          "Microsoft.Extensions.Options": "3.0.0",
+          "Steeltoe.Extensions.Configuration.CloudFoundryBase": "2.4.4"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Steeltoe.CloudFoundry.ConnectorBase.dll": {
+            "assemblyVersion": "2.4.4.0",
+            "fileVersion": "2.4.4.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Steeltoe.CloudFoundry.ConnectorBase.dll": {}
+        }
+      },
       "Steeltoe.Common/2.4.4": {
         "dependencies": {
           "Microsoft.Extensions.Caching.Abstractions": "2.2.0",
@@ -702,6 +770,57 @@
           "lib/netstandard2.0/Steeltoe.Common.Http.dll": {}
         }
       },
+      "Steeltoe.Discovery.ClientCore/2.4.4": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Hosting.Abstractions": "2.1.0",
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "3.0.0",
+          "Steeltoe.Common": "2.4.4",
+          "Steeltoe.Discovery.ConsulBase": "2.4.4",
+          "Steeltoe.Discovery.EurekaBase": "2.4.4"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Steeltoe.Discovery.ClientCore.dll": {
+            "assemblyVersion": "2.4.4.0",
+            "fileVersion": "2.4.4.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Steeltoe.Discovery.ClientCore.dll": {}
+        }
+      },
+      "Steeltoe.Discovery.ConsulBase/2.4.4": {
+        "dependencies": {
+          "Consul": "0.7.2.6",
+          "Newtonsoft.Json": "11.0.2",
+          "Steeltoe.CloudFoundry.ConnectorBase": "2.4.4",
+          "Steeltoe.Common.Http": "2.4.4"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Steeltoe.Discovery.ConsulBase.dll": {
+            "assemblyVersion": "2.4.4.0",
+            "fileVersion": "2.4.4.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Steeltoe.Discovery.ConsulBase.dll": {}
+        }
+      },
+      "Steeltoe.Discovery.EurekaBase/2.4.4": {
+        "dependencies": {
+          "Newtonsoft.Json": "11.0.2",
+          "Steeltoe.CloudFoundry.ConnectorBase": "2.4.4",
+          "Steeltoe.Common.Http": "2.4.4"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Steeltoe.Discovery.EurekaBase.dll": {
+            "assemblyVersion": "2.4.4.0",
+            "fileVersion": "2.4.4.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Steeltoe.Discovery.EurekaBase.dll": {}
+        }
+      },
       "Steeltoe.Extensions.Configuration.CloudFoundryBase/2.4.4": {
         "dependencies": {
           "Microsoft.Extensions.Configuration": "3.0.0",
@@ -732,6 +851,52 @@
         },
         "compile": {
           "lib/netcoreapp3.0/Steeltoe.Extensions.Configuration.CloudFoundryCore.dll": {}
+        }
+      },
+      "Steeltoe.Extensions.Configuration.ConfigServerBase/2.4.4": {
+        "dependencies": {
+          "Steeltoe.Common.Http": "2.4.4",
+          "Steeltoe.Extensions.Configuration.CloudFoundryBase": "2.4.4",
+          "Steeltoe.Extensions.Configuration.PlaceholderBase": "2.4.4"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Steeltoe.Extensions.Configuration.ConfigServerBase.dll": {
+            "assemblyVersion": "2.4.4.0",
+            "fileVersion": "2.4.4.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Steeltoe.Extensions.Configuration.ConfigServerBase.dll": {}
+        }
+      },
+      "Steeltoe.Extensions.Configuration.ConfigServerCore/2.4.4": {
+        "dependencies": {
+          "Microsoft.Extensions.Hosting": "3.0.0",
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "3.0.0",
+          "Steeltoe.Extensions.Configuration.ConfigServerBase": "2.4.4"
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Steeltoe.Extensions.Configuration.ConfigServerCore.dll": {
+            "assemblyVersion": "2.4.4.0",
+            "fileVersion": "2.4.4.0"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.0/Steeltoe.Extensions.Configuration.ConfigServerCore.dll": {}
+        }
+      },
+      "Steeltoe.Extensions.Configuration.PlaceholderBase/2.4.4": {
+        "dependencies": {
+          "Steeltoe.Common": "2.4.4"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Steeltoe.Extensions.Configuration.PlaceholderBase.dll": {
+            "assemblyVersion": "2.4.4.0",
+            "fileVersion": "2.4.4.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Steeltoe.Extensions.Configuration.PlaceholderBase.dll": {}
         }
       },
       "Steeltoe.Extensions.Logging.DynamicLogger/2.4.4": {
@@ -869,6 +1034,17 @@
           "Swashbuckle.AspNetCore.Swagger": "5.5.1",
           "Swashbuckle.AspNetCore.SwaggerGen": "5.5.1",
           "Swashbuckle.AspNetCore.SwaggerUI": "5.5.1"
+        }
+      },
+      "Swashbuckle.AspNetCore.ReDoc/5.5.1": {
+        "runtime": {
+          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.ReDoc.dll": {
+            "assemblyVersion": "5.5.1.0",
+            "fileVersion": "5.5.1.0"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.ReDoc.dll": {}
         }
       },
       "Swashbuckle.AspNetCore.Swagger/5.5.1": {
@@ -1141,6 +1317,46 @@
           "runtime.native.System": "4.3.0",
           "runtime.native.System.Net.Http": "4.3.0",
           "runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2"
+        }
+      },
+      "System.Net.Http.WinHttpHandler/4.0.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "3.0.0",
+          "Microsoft.Win32.Primitives": "4.3.0",
+          "System.Collections": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Diagnostics.DiagnosticSource": "4.5.0",
+          "System.Globalization": "4.3.0",
+          "System.IO": "4.3.0",
+          "System.IO.Compression": "4.3.0",
+          "System.Net.Http": "4.3.3",
+          "System.Net.Primitives": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Runtime.Handles": "4.3.0",
+          "System.Runtime.InteropServices": "4.3.0",
+          "System.Security.Cryptography.X509Certificates": "4.3.0",
+          "System.Text.Encoding": "4.3.0",
+          "System.Threading": "4.3.0",
+          "System.Threading.Tasks": "4.3.0"
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/netstandard1.3/System.Net.Http.WinHttpHandler.dll": {
+            "rid": "unix",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "1.0.24212.1"
+          },
+          "runtimes/win/lib/netstandard1.3/System.Net.Http.WinHttpHandler.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "1.0.24212.1"
+          }
+        },
+        "compile": {
+          "ref/netstandard1.3/System.Net.Http.WinHttpHandler.dll": {}
         }
       },
       "System.Net.Primitives/4.3.0": {
@@ -1447,6 +1663,7 @@
           "System.Text.Encoding": "4.3.0"
         }
       },
+      "System.Text.Encodings.Web/4.5.0": {},
       "System.Text.Json/4.6.0": {},
       "System.Text.RegularExpressions/4.3.0": {
         "dependencies": {
@@ -1471,6 +1688,11 @@
           "System.Collections": "4.3.0",
           "System.Runtime": "4.3.0",
           "System.Threading.Tasks": "4.3.0"
+        }
+      },
+      "System.Threading.Thread/4.0.0": {
+        "dependencies": {
+          "System.Runtime": "4.3.0"
         }
       },
       "System.Threading.Timer/4.3.0": {
@@ -1671,7 +1893,7 @@
         },
         "compileOnly": true
       },
-      "Microsoft.AspNetCore.Hosting.Abstractions/3.1.0.0": {
+      "Microsoft.AspNetCore.Hosting.Abstractions.Reference/3.1.0.0": {
         "compile": {
           "Microsoft.AspNetCore.Hosting.Abstractions.dll": {}
         },
@@ -1683,7 +1905,7 @@
         },
         "compileOnly": true
       },
-      "Microsoft.AspNetCore.Hosting.Server.Abstractions/3.1.0.0": {
+      "Microsoft.AspNetCore.Hosting.Server.Abstractions.Reference/3.1.0.0": {
         "compile": {
           "Microsoft.AspNetCore.Hosting.Server.Abstractions.dll": {}
         },
@@ -1695,7 +1917,7 @@
         },
         "compileOnly": true
       },
-      "Microsoft.AspNetCore.Http.Abstractions/3.1.0.0": {
+      "Microsoft.AspNetCore.Http.Abstractions.Reference/3.1.0.0": {
         "compile": {
           "Microsoft.AspNetCore.Http.Abstractions.dll": {}
         },
@@ -1725,7 +1947,7 @@
         },
         "compileOnly": true
       },
-      "Microsoft.AspNetCore.Http.Features/3.1.0.0": {
+      "Microsoft.AspNetCore.Http.Features.Reference/3.1.0.0": {
         "compile": {
           "Microsoft.AspNetCore.Http.Features.dll": {}
         },
@@ -3027,7 +3249,7 @@
         },
         "compileOnly": true
       },
-      "System.Text.Encodings.Web/4.0.5.0": {
+      "System.Text.Encodings.Web.Reference/4.0.5.0": {
         "compile": {
           "System.Text.Encodings.Web.dll": {}
         },
@@ -3087,7 +3309,7 @@
         },
         "compileOnly": true
       },
-      "System.Threading.Thread/4.1.2.0": {
+      "System.Threading.Thread.Reference/4.1.2.0": {
         "compile": {
           "System.Threading.Thread.dll": {}
         },
@@ -3215,12 +3437,47 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Consul/0.7.2.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0inTc+PLbk/TELmdO12q5N/4lZ2kn5w2EmOqG0g686JXgr1OKEGPCuGZxWYE+NuROy7dwX/FBxKUTph7vuyjPA==",
+      "path": "consul/0.7.2.6",
+      "hashPath": "consul.0.7.2.6.nupkg.sha512"
+    },
     "GitInfo/2.0.26": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-I9w5KSLwXF6jwhMrYExmokIOhIOVDjTSEWwlvNYHVTy4MsF9HZj/QdrFcKCMm5lP9ooBwdxWYDCLw+HpyVM5eg==",
       "path": "gitinfo/2.0.26",
       "hashPath": "gitinfo.2.0.26.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Hosting.Abstractions/2.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1TQgBfd/NPZLR2o/h6l5Cml2ZCF5hsyV4h9WEwWwAIavrbdTnaNozGGcTOd4AOgQvogMM9UM1ajflm9Cwd0jLQ==",
+      "path": "microsoft.aspnetcore.hosting.abstractions/2.1.0",
+      "hashPath": "microsoft.aspnetcore.hosting.abstractions.2.1.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Hosting.Server.Abstractions/2.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YTKMi2vHX6P+WHEVpW/DS+eFHnwivCSMklkyamcK1ETtc/4j8H3VR0kgW8XIBqukNxhD8k5wYt22P7PhrWSXjQ==",
+      "path": "microsoft.aspnetcore.hosting.server.abstractions/2.1.0",
+      "hashPath": "microsoft.aspnetcore.hosting.server.abstractions.2.1.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Http.Abstractions/2.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vbFDyKsSYBnxl3+RABtN79b0vsTcG66fDY8vD6Nqvu9uLtSej70Q5NcbGlnN6bJpZci5orSdgFTHMhBywivDPg==",
+      "path": "microsoft.aspnetcore.http.abstractions/2.1.0",
+      "hashPath": "microsoft.aspnetcore.http.abstractions.2.1.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Http.Features/2.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UmkUePxRjsQW0j5euFFscBwjvTu25b8+qIK/2fI3GvcqQ+mkwgbWNAT8b/Gkoei1m2bTWC07lSdutuRDPPLcJA==",
+      "path": "microsoft.aspnetcore.http.features/2.1.0",
+      "hashPath": "microsoft.aspnetcore.http.features.2.1.0.nupkg.sha512"
     },
     "Microsoft.DiaSymReader/1.2.0": {
       "type": "package",
@@ -3614,6 +3871,13 @@
       "path": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl/4.3.2",
       "hashPath": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512"
     },
+    "Steeltoe.CloudFoundry.ConnectorBase/2.4.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PLoze0tkPLxLiFiSLuRpcKQ+7PhJUAwHP4N6p26tmwbepJGFalOXB5JmOAp0ZLf5IITD9gs5C+HIpMJnSZ/sSg==",
+      "path": "steeltoe.cloudfoundry.connectorbase/2.4.4",
+      "hashPath": "steeltoe.cloudfoundry.connectorbase.2.4.4.nupkg.sha512"
+    },
     "Steeltoe.Common/2.4.4": {
       "type": "package",
       "serviceable": true,
@@ -3635,6 +3899,27 @@
       "path": "steeltoe.common.http/2.4.4",
       "hashPath": "steeltoe.common.http.2.4.4.nupkg.sha512"
     },
+    "Steeltoe.Discovery.ClientCore/2.4.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZWTLZ5FBnP8nfyyVwVOdKuI44zrReSMu5O/+ieJWLEL92jdyCP6t0LLUVSa0EhJg5slHnXICy76zoxY31nzh6g==",
+      "path": "steeltoe.discovery.clientcore/2.4.4",
+      "hashPath": "steeltoe.discovery.clientcore.2.4.4.nupkg.sha512"
+    },
+    "Steeltoe.Discovery.ConsulBase/2.4.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-K/KUTQ/dq2Ns7SGq581D+uADFrxATpE7riL0KCblUFJpWfgkQsgyY3yXHlCJnt0Gpqajt9nWZAIqhRSPqbS7GQ==",
+      "path": "steeltoe.discovery.consulbase/2.4.4",
+      "hashPath": "steeltoe.discovery.consulbase.2.4.4.nupkg.sha512"
+    },
+    "Steeltoe.Discovery.EurekaBase/2.4.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0U7cMya7jnZeY7wUwZ6HbxOn6EtP+aCnQFhmT9iBU1GlHbaPnFxTvmO37Ft1KbVgZqQChRwwgpv/SCWr/Q9YrQ==",
+      "path": "steeltoe.discovery.eurekabase/2.4.4",
+      "hashPath": "steeltoe.discovery.eurekabase.2.4.4.nupkg.sha512"
+    },
     "Steeltoe.Extensions.Configuration.CloudFoundryBase/2.4.4": {
       "type": "package",
       "serviceable": true,
@@ -3648,6 +3933,27 @@
       "sha512": "sha512-/flTfKaTlXU7OmycRB6yk3lrRa54HBkU9zeTLEORSjWQzkS2ptAxeYo2VoN9xcDhF0+kjTQrEYH3HNZol64Gqg==",
       "path": "steeltoe.extensions.configuration.cloudfoundrycore/2.4.4",
       "hashPath": "steeltoe.extensions.configuration.cloudfoundrycore.2.4.4.nupkg.sha512"
+    },
+    "Steeltoe.Extensions.Configuration.ConfigServerBase/2.4.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-A3NU0gDBT9W+upH+GxDeGhjQ7zAsaiZKr1lM8P2h+OGTb8U7GfvDvX+ndex0BjBjhodvsp16Kbj6U0RGJtmosA==",
+      "path": "steeltoe.extensions.configuration.configserverbase/2.4.4",
+      "hashPath": "steeltoe.extensions.configuration.configserverbase.2.4.4.nupkg.sha512"
+    },
+    "Steeltoe.Extensions.Configuration.ConfigServerCore/2.4.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-esmEcctbf6Luigv/8PTcU4QMGo4Pzo9H7dUYLwYrtX65tE2lGzTe/DaD6xt4uWqM8cKMyd01MT45101FK0Pl+Q==",
+      "path": "steeltoe.extensions.configuration.configservercore/2.4.4",
+      "hashPath": "steeltoe.extensions.configuration.configservercore.2.4.4.nupkg.sha512"
+    },
+    "Steeltoe.Extensions.Configuration.PlaceholderBase/2.4.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-06fXu3/btuznGKLkT0Vzv9f+rI+/xNqStTRTV0jrr0qtSvoW1GAB0D0PKeUpoTZIXB/dansa9J+z82oYPxiuHw==",
+      "path": "steeltoe.extensions.configuration.placeholderbase/2.4.4",
+      "hashPath": "steeltoe.extensions.configuration.placeholderbase.2.4.4.nupkg.sha512"
     },
     "Steeltoe.Extensions.Logging.DynamicLogger/2.4.4": {
       "type": "package",
@@ -3711,6 +4017,13 @@
       "sha512": "sha512-M1CdrptwDw/9Es/W1twwM6w2W0I019uhMDA5q3LUQo4TYZblDipu/oO5gtUpe0tEh1UOdrxlZeQBhmJSTtAtnA==",
       "path": "swashbuckle.aspnetcore/5.5.1",
       "hashPath": "swashbuckle.aspnetcore.5.5.1.nupkg.sha512"
+    },
+    "Swashbuckle.AspNetCore.ReDoc/5.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dQHru3E4yTMDKNYtbHnGirIWqf2st0fGuDy6llxdubJJsorw8dpFRkwd5Y1t3sI88N7SBOnYFqUtwIHolYCA1g==",
+      "path": "swashbuckle.aspnetcore.redoc/5.5.1",
+      "hashPath": "swashbuckle.aspnetcore.redoc.5.5.1.nupkg.sha512"
     },
     "Swashbuckle.AspNetCore.Swagger/5.5.1": {
       "type": "package",
@@ -3893,6 +4206,13 @@
       "sha512": "sha512-7rCqIbkC/P2+A00NoDH5gnvFhADmX7Dc4INvsOajbU1MVhktE9vZNrjPtF82N6Uo7obK+yzlrPUv/M+snnN/9w==",
       "path": "system.net.http/4.3.3",
       "hashPath": "system.net.http.4.3.3.nupkg.sha512"
+    },
+    "System.Net.Http.WinHttpHandler/4.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-86HNmRaoJZRtu2Yrd3ZVC3kd8tvdYphuXhBlW+QFP5nuHzuCMThVLDWjSXRA4PIoiTPhxYggtKAjmBt6CAZGaw==",
+      "path": "system.net.http.winhttphandler/4.0.0",
+      "hashPath": "system.net.http.winhttphandler.4.0.0.nupkg.sha512"
     },
     "System.Net.Primitives/4.3.0": {
       "type": "package",
@@ -4097,6 +4417,13 @@
       "path": "system.text.encoding.extensions/4.3.0",
       "hashPath": "system.text.encoding.extensions.4.3.0.nupkg.sha512"
     },
+    "System.Text.Encodings.Web/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Xg4G4Indi4dqP1iuAiMSwpiWS54ZghzR644OtsRCm/m/lBMG8dUBhLVN7hLm8NNrNTR+iGbshCPTwrvxZPlm4g==",
+      "path": "system.text.encodings.web/4.5.0",
+      "hashPath": "system.text.encodings.web.4.5.0.nupkg.sha512"
+    },
     "System.Text.Json/4.6.0": {
       "type": "package",
       "serviceable": true,
@@ -4131,6 +4458,13 @@
       "sha512": "sha512-npvJkVKl5rKXrtl1Kkm6OhOUaYGEiF9wFbppFRWSMoApKzt2PiPHT2Bb8a5sAWxprvdOAtvaARS9QYMznEUtug==",
       "path": "system.threading.tasks.extensions/4.3.0",
       "hashPath": "system.threading.tasks.extensions.4.3.0.nupkg.sha512"
+    },
+    "System.Threading.Thread/4.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gIdJqDXlOr5W9zeqFErLw3dsOsiShSCYtF9SEHitACycmvNvY8odf9kiKvp6V7aibc8C4HzzNBkWXjyfn7plbQ==",
+      "path": "system.threading.thread/4.0.0",
+      "hashPath": "system.threading.thread.4.0.0.nupkg.sha512"
     },
     "System.Threading.Timer/4.3.0": {
       "type": "package",
@@ -4283,7 +4617,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.AspNetCore.Hosting.Abstractions/3.1.0.0": {
+    "Microsoft.AspNetCore.Hosting.Abstractions.Reference/3.1.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -4293,7 +4627,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.AspNetCore.Hosting.Server.Abstractions/3.1.0.0": {
+    "Microsoft.AspNetCore.Hosting.Server.Abstractions.Reference/3.1.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -4303,7 +4637,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.AspNetCore.Http.Abstractions/3.1.0.0": {
+    "Microsoft.AspNetCore.Http.Abstractions.Reference/3.1.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -4328,7 +4662,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.AspNetCore.Http.Features/3.1.0.0": {
+    "Microsoft.AspNetCore.Http.Features.Reference/3.1.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -5413,7 +5747,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.Text.Encodings.Web/4.0.5.0": {
+    "System.Text.Encodings.Web.Reference/4.0.5.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -5463,7 +5797,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.Threading.Thread/4.1.2.0": {
+    "System.Threading.Thread.Reference/4.1.2.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""

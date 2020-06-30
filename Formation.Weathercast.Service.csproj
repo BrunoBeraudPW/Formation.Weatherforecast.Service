@@ -12,13 +12,16 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Steeltoe.Common.Hosting" Version="2.4.4" />
+    <PackageReference Include="Steeltoe.Discovery.ClientCore" Version="2.4.4" />
     <PackageReference Include="Steeltoe.Extensions.Configuration.CloudFoundryCore" Version="2.4.4" />
+    <PackageReference Include="Steeltoe.Extensions.Configuration.ConfigServerCore" Version="2.4.4" />
     <PackageReference Include="Steeltoe.Extensions.Logging.DynamicLogger" Version="2.4.4" />
     <PackageReference Include="Steeltoe.Management.CloudFoundryCore" Version="2.4.4" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.5.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Redoc" Version="5.5.1" />
   </ItemGroup>
-
-   <ItemGroup>
+   
+  <ItemGroup>
     <None Include="git.properties">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

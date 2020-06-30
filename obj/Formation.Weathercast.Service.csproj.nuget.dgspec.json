@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\dev\\Formation\\Micro-services\\Formation.Weathercast.Service\\Formation.Weathercast.Service.csproj": {}
+    "C:\\dev\\Formation\\Micro-services\\Formation.Weatherforecast.Service\\Formation.Weathercast.Service.csproj": {}
   },
   "projects": {
-    "C:\\dev\\Formation\\Micro-services\\Formation.Weathercast.Service\\Formation.Weathercast.Service.csproj": {
+    "C:\\dev\\Formation\\Micro-services\\Formation.Weatherforecast.Service\\Formation.Weathercast.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\dev\\Formation\\Micro-services\\Formation.Weathercast.Service\\Formation.Weathercast.Service.csproj",
+        "projectUniqueName": "C:\\dev\\Formation\\Micro-services\\Formation.Weatherforecast.Service\\Formation.Weathercast.Service.csproj",
         "projectName": "Formation.Weathercast.Service",
-        "projectPath": "C:\\dev\\Formation\\Micro-services\\Formation.Weathercast.Service\\Formation.Weathercast.Service.csproj",
+        "projectPath": "C:\\dev\\Formation\\Micro-services\\Formation.Weatherforecast.Service\\Formation.Weathercast.Service.csproj",
         "packagesPath": "C:\\Users\\bruno.beraud\\.nuget\\packages\\",
-        "outputPath": "C:\\dev\\Formation\\Micro-services\\Formation.Weathercast.Service\\obj\\",
+        "outputPath": "C:\\dev\\Formation\\Micro-services\\Formation.Weatherforecast.Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -48,7 +48,15 @@
               "target": "Package",
               "version": "[2.4.4, )"
             },
+            "Steeltoe.Discovery.ClientCore": {
+              "target": "Package",
+              "version": "[2.4.4, )"
+            },
             "Steeltoe.Extensions.Configuration.CloudFoundryCore": {
+              "target": "Package",
+              "version": "[2.4.4, )"
+            },
+            "Steeltoe.Extensions.Configuration.ConfigServerCore": {
               "target": "Package",
               "version": "[2.4.4, )"
             },
@@ -61,6 +69,10 @@
               "version": "[2.4.4, )"
             },
             "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.5.1, )"
+            },
+            "Swashbuckle.AspNetCore.Redoc": {
               "target": "Package",
               "version": "[5.5.1, )"
             },
